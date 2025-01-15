@@ -1,0 +1,136 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: bisque;
+    background-color: aliceblue;
+}
+/* Estilo do Menu Superior */
+.menu-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.logo {
+    font-size: calc(1rem + 1vw);
+    font-weight: bold;
+   
+}
+.logo img {
+    height: 82vh;
+    max-width: 250px;
+    object-fit: contain;
+}
+
+
+/* Estilo do Menu Hamburguer */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Lista do Menu (Desktop) */
+.menu-lista {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-lista a {
+    text-decoration: none;
+    color: white;
+    font-size: calc(1rem + 0.5vw);
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu-lista a:hover {
+    color: red;
+}
+
+/* Estilo do Conteúdo para evitar sobreposição */
+main {
+    padding-top: 12vh;
+    font-size: 1.2rem;
+   
+}
+
+/* Estilo Responsivo para Telas Menores (Menu Hamburguer) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-lista {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Logo abaixo do menu */
+        left: 0;
+        background: #333;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    /* Ativa o menu ao clicar */
+    .menu-lista.active {
+        display: flex;
+    }
+
+    .menu-lista a {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Configuração do layout com flexbox para 5 divisões horizontais */
+.container {
+    display: flex;                /* Cria um layout flexível */
+    flex-direction: column;       /* Organiza as divisórias de forma vertical */
+    height: 360vh;                /* Ocupa toda a altura da tela */
+    width: 100vw;                 /* Ocupa toda a largura da tela */
+}
+
+/* Cada divisória ocupa 1/5 do espaço disponível */
+.divisoria {
+    flex: 1;                      /* Divide igualmente o espaço */
+    display: flex;                /* Alinhamento central do texto */
+    justify-content: center;      
+    align-items: center;
+    font-size: calc(1rem + 1vw);  /* Fonte responsiva */
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white; /* Linha entre as divisórias */
+}
+
+/* Remover a borda da última divisória para um visual limpo */
+.divisoria:last-child {
+    border-bottom: none;
+}
+
+
+
+
+

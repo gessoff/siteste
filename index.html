@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Superior Fixo e Responsivo -->
+    <nav class="menu-superior">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo da Empresa">
+        </div>
+        
+        <!-- Botão de Menu Hamburguer -->
+        <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+        
+        <!-- Itens do Menu -->
+        <ul class="menu-lista">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Empresa</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Portfólio</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo para demonstração -->
+    <main>
+        
+       
+        <div class="container">
+            <div class="divisoria" style="background: #ff5733;">aqui fazermos uma apresentação inicial da empresa com uma foto no fundo</div>
+            <div class="divisoria" style="background: #33ff57;">aqui falamos mais um pouco</div>
+            <div class="divisoria" style="background: #3357ff;">aqui colocamos todos nossos serviços</div>
+            <div class="divisoria" style="background: #f3ff33;">aqui colocomos fotos dos serviços</div>
+            <div class="divisoria" style="background: #a833ff;">aqui contato, redes social, email, whats tudo</div>
+        </div>
+        
+    </main>
+
+    <!-- Script para controlar o menu hamburguer -->
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menuLista = document.querySelector('.menu-lista');
+
+        toggleButton.addEventListener('click', () => {
+            menuLista.classList.toggle('active');
+        });
+    </script>
+
+
+
+</body>
+</html>
+
+
+
